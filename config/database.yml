@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: brain_pick_development
+ 
+test:
+  adapter: postgresql
+  database: brain_pick_test
