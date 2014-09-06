@@ -40,4 +40,10 @@ class PersonController < ApplicationController
       render 'people/edit'
     end
   end
+
+  def destroy
+    @person = Person.find params[:id]
+    @person.destroy
+    render 'people/destroy'
+  end
 end

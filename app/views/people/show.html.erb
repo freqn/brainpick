@@ -4,5 +4,6 @@
   <p>Specialty: <%= @person.specialty %></p>
   <p>Email: <%= @person.email %></p>
   <p><%= link_to "Edit", "/people/#{@person.id}/edit" %></p>
+  <p><%= link_to '', "/people/#{@person.id}", method: :delete, class: "glyphicon glyphicon-trash" %></p>
   <p><%= link_to "People", "/people" %></p>
 </div>
