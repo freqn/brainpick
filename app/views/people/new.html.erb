@@ -1,0 +1,34 @@
+<div class="container">
+<h2>Add a person</h2>
+
+<% if @person.errors.any? %>
+  <h3>FIX THESE ERRORS: </h3>
+    <% @person.errors.full_messages.each  do |error|%>
+      <p class="error">* <%= error %></p>
+    <% end %>
+<% end %>
+
+
+<form action="/people" method="post">
+  <div class="form-group">
+  <label for="person_name">Name</label>
+  <input class="form-control" id="person_name" name="name" type="text" value="<% @person.name %>">
+  </div>
+
+  <div class="form-group">
+  <label for="person_specialty">Specialty</label>
+  <input class="form-control" id="person_specialty" name="specialty" type="text" value="<% @person.specialty %>">
+  </div>
+
+  <div class="form-group">
+  <label for="person_email">Email</label>
+  <input class="form-control" id="person_emai" name="email" type="text" value="<% @person.email %>">
+  </div>
+
+
+  <button class="btn btn-primary">Create person</button>
+
+</form>
+
+<%= link_to "Back to people", "/people" %>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+<h2>Edit <%= @person.name %></h2>
+
+<form action="/people/<%= @person.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <div class="form-group">
+  <label for="person_name">Name</label>
+  <input class="form-control" id="person_name" name="name" type="text" value="<%= @person.name %>">
+  </div>
+
+  <div class="form-group">
+  <label for="person_specialty">Specialty</label>
+  <input class="form-control" id="person_specialty" name="specialty" type="text" value="<%= @person.specialty %>">
+  </div>
+
+  <div class="form-group">
+  <label for="person_email">Email</label>
+  <input class="form-control" id="person_emai" name="email" type="text" value="<%= @person.email %>">
+  </div>
+
+
+  <button class="btn btn-primary">Update person</button>
+
+</form>
+
+<%= link_to "Back to people", "/people" %>
+</div>

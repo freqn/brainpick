@@ -1,2 +1,57 @@
-//@import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap/theme";
+
+body {
+  font-size: 2.3em; 
+  margin: 0 auto;
+}
+
+.container ul {
+  list-style-type: none;
+}
+
+.glyphicon-cog {
+  //vertical-align: middle;
+  font-size: .8em;
+  color: #AFADB1;
+  padding: 0;
+}
+.glyphicon-cog:hover {
+  text-decoration: none;
+}
+
+.alt-color1 {
+  color: #313E5B;
+}
+
+.alt-color2 {
+  color: #660609;
+}
+
+ol {
+  padding-left: 1.4em;
+}
+
+.error {
+  color: red;
+}
+
+.form-control {
+  width: 18em;
+}
+
+.rotate:hover {
+    -webkit-animation: rotate 4s forwards;
+    animation: rotate 4s forwards;
+}
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}

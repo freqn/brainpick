@@ -1,9 +1,14 @@
 <div class="container">
-  <h1>People to Brain-Pick</h1>
+  <h2>People of interest:</h2>
 
-  <ul>
+<ol>
     <% @people.each do |person|%>
-      <li><%= person.name %></li>
+      <li>
+      <span class="alt-color1"><%= person.name %></span> 
+      <b>|</b> 
+      <span class="alt-color2"><%= person.specialty %></span> 
+      <a href="/people/<%= person.id %>" class="rotate glyphicon glyphicon-cog"></a></li>   
     <% end %>
-  </ul>
+</ol>
+<p><%= link_to "New", "/people/new" %></p>
 </div>
