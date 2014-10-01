@@ -14,12 +14,12 @@
     <% @people.each do |person|%>
       <tr>
       <div class="data-row">
-        <td><span class="alt-color1"><%= person.name %></span></td> 
+        <td><span class="alt-color1"><%= person.name %></span></td>
         <td><span class="alt-color2"><%= person.specialty %></span></td>
         <!--<td><span class="rotate glyphicon glyphicon-envelope"></span></td>-->
-        <td class="action"><a href="" class="glyphicon glyphicon-envelope"></a> <a href="/people/<%= person.id %>" class="rotate glyphicon glyphicon-cog"></a> <%= link_to '', "/people/#{person.id}", method: :delete, class: "glyphicon glyphicon-trash" %></td>
+        <td class="action"><%= mail_to person.email, '', class: "glyphicon glyphicon-envelope" %> <a href="/people/<%= person.id %>" class="rotate glyphicon glyphicon-cog"></a> <%= link_to '', "/people/#{person.id}", method: :delete, class: "glyphicon glyphicon-trash" %></td>
         </div>
-      </tr>     
+      </tr>
     <% end %>
 <tr>
 <td><%= link_to "", "/people/new", class: "glyphicon glyphicon-plus" %></td>
