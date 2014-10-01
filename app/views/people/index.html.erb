@@ -1,14 +1,31 @@
 <div class="container">
-  <h2>People of interest:</h2>
+  <h2>People to brain-pick</h2>
 
-<ol>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Specialty</th>
+      <!--<th>Email</th>-->
+      <th class="action">Action</th>
+    </tr>
+  </thead>
+  <tbody>
     <% @people.each do |person|%>
-      <li>
-      <span class="alt-color1"><%= person.name %></span> 
-      <b>|</b> 
-      <span class="alt-color2"><%= person.specialty %></span> 
-      <a href="/people/<%= person.id %>" class="rotate glyphicon glyphicon-cog"></a></li>   
+      <tr>
+      <div class="data-row">
+        <td><span class="alt-color1"><%= person.name %></span></td> 
+        <td><span class="alt-color2"><%= person.specialty %></span></td>
+        <!--<td><span class="rotate glyphicon glyphicon-envelope"></span></td>-->
+        <td class="action"><a href="" class="glyphicon glyphicon-envelope"></a> <a href="/people/<%= person.id %>" class="rotate glyphicon glyphicon-cog"></a> <%= link_to '', "/people/#{person.id}", method: :delete, class: "glyphicon glyphicon-trash" %></td>
+        </div>
+      </tr>     
     <% end %>
-</ol>
-<p><%= link_to "New", "/people/new" %></p>
+<tr>
+<td><%= link_to "", "/people/new", class: "glyphicon glyphicon-plus" %></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
