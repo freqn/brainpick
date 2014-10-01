@@ -9,20 +9,20 @@ class PersonController < ApplicationController
     render 'people/new'
   end
 
-  def show
-    @person = Person.find params[:id]
-    render 'people/show'
-  end
-
   def create
     @person = Person.create name: params[:name],
                           specialty: params[:specialty],
                           email: params[:email]
     if @person.save
-      render 'people/success'
+      redirect_to '/people/'
     else
       render 'people/new'
     end
+  end
+  
+  def show
+    @person = Person.find params[:id]
+    render 'people/show'
   end
 
   def edit
@@ -35,7 +35,7 @@ class PersonController < ApplicationController
     if @person.update name: params[:name],
                           specialty: params[:specialty],
                           email: params[:email]
-      render 'people/success'
+      redirect_to '/people/'
     else
       render 'people/edit'
     end
@@ -44,6 +44,6 @@ class PersonController < ApplicationController
   def destroy
     @person = Person.find params[:id]
     @person.destroy
-    render 'people/destroy'
+    redirect_to '/people/'
   end
 end

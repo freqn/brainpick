@@ -1,7 +1,25 @@
 development:
   adapter: postgresql
-  database: brain_pick_development
- 
+  encoding: unicode
+  database: brain_pick-dev
+  pool: 5
+  host: localhost
+  username: action
+  password:
+
 test:
   adapter: postgresql
-  database: brain_pick_test
+  database: brain_pick-test
+  pool: 5
+  host: localhost
+  username: action
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: brain_pick-prod
+  pool: 5
+  host: localhost
+  username: action
+  password:

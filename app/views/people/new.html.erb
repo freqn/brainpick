@@ -1,5 +1,5 @@
 <div class="container">
-<h2>Add a person</h2>
+<h2>New Person</h2>
 
 <% if @person.errors.any? %>
   <h3>FIX THESE ERRORS: </h3>
@@ -8,21 +8,20 @@
     <% end %>
 <% end %>
 
-
 <form action="/people" method="post">
   <div class="form-group">
-  <label for="person_name">Name</label>
-  <input class="form-control" id="person_name" name="name" type="text" value="<% @person.name %>">
+    <label for="person_name">Name</label>
+  <input class="form-control" id="person_name" name="name" type="text" value="<% @person.name %>" placeholder="First & Last">
   </div>
 
   <div class="form-group">
   <label for="person_specialty">Specialty</label>
-  <input class="form-control" id="person_specialty" name="specialty" type="text" value="<% @person.specialty %>">
+  <input class="form-control" id="person_specialty" name="specialty" type="text" value="<% @person.specialty %>" placeholder="Area of expertise?">
   </div>
 
   <div class="form-group">
   <label for="person_email">Email</label>
-  <input class="form-control" id="person_emai" name="email" type="text" value="<% @person.email %>">
+  <input class="form-control" id="person_email" name="email" type="text" value="<% @person.email %>" placeholder="Enter a valid email address">
   </div>
 
 
@@ -30,5 +29,7 @@
 
 </form>
 
+
 <%= link_to "Back to people", "/people" %>
 </div>
+  

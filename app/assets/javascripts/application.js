@@ -15,3 +15,9 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+  $("a[rel='tooltip']").tooltip();
+  $('a[rel="nofollow"]').tooltip();
+})
+  

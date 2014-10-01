@@ -1,8 +1,16 @@
 <div class="container">
-  <h2>People to brain-pick</h2>
+  
 
 <table class="table">
   <thead>
+    <tr>
+      <td></td>
+      <td><h2>Resource Directory</h2></td>
+      <td></td>
+      
+    </tr>
+    <tr>
+    </tr>
     <tr>
       <th>Name</th>
       <th>Specialty</th>
@@ -11,21 +19,35 @@
     </tr>
   </thead>
   <tbody>
+    <td></td>
+    <td></td>
+    <td></td>
+    
     <% @people.each do |person|%>
       <tr>
       <div class="data-row">
         <td><span class="alt-color1"><%= person.name %></span></td>
         <td><span class="alt-color2"><%= person.specialty %></span></td>
         <!--<td><span class="rotate glyphicon glyphicon-envelope"></span></td>-->
-        <td class="action"><%= mail_to person.email, '', class: "glyphicon glyphicon-envelope" %> <a href="/people/<%= person.id %>" class="rotate glyphicon glyphicon-cog"></a> <%= link_to '', "/people/#{person.id}", method: :delete, class: "glyphicon glyphicon-trash" %></td>
+        <td class="action">
+          <%= mail_to person.email, '', class: "glyphicon glyphicon-envelope", rel: "tooltip", title: "Send #{person.name} an email" %>
+          <%= link_to "", "/people/#{person.id}/edit", class: "glyphicon glyphicon-cog", rel: "tooltip", title: "Edit #{person.name}" %>
+          <%= link_to '', "/people/#{person.id}", class: "glyphicon glyphicon-trash", rel: "nofollow", title: "Delete #{person.name}", method: :delete %></td>
         </div>
       </tr>
     <% end %>
 <tr>
-<td><%= link_to "", "/people/new", class: "glyphicon glyphicon-plus" %></td>
-<td></td>
-<td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td><%= link_to "", "/people/new", class: "btn btn-default glyphicon glyphicon-plus", rel: "tooltip", title: "Add a new record", style: "width: 75%;" %></td>
+  <td></td>
 </tr>
 </tbody>
 </table>
 </div>
+
+

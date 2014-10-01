@@ -25,9 +25,13 @@ body {
   list-style-type: none;
 }
 
-h2 {
-  text-align: center;
-  margin: 1.3em auto;
+//h2 {
+//  text-align: center;
+//  margin: 1.3em auto;
+//}
+
+.input {
+  margin: 0 auto;
 }
 
 .glyphicon-cog, .glyphicon-trash, .glyphicon-envelope {
@@ -90,6 +94,8 @@ ol {
   width: 100%;
   @include border-radius(10px);
 }
+
+
 
 
 
