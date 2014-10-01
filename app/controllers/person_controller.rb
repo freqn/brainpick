@@ -37,7 +37,7 @@ class PersonController < ApplicationController
                           email: params[:email]
       redirect_to '/people/'
     else
-      render 'people/edit'
+      render 'people/index'
     end
   end
 

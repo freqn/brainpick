@@ -32,7 +32,7 @@
         <td class="action">
           <%= mail_to person.email, '', class: "glyphicon glyphicon-envelope", rel: "tooltip", title: "Send #{person.name} an email" %>
           <%= link_to "", "/people/#{person.id}/edit", class: "glyphicon glyphicon-cog", rel: "tooltip", title: "Edit #{person.name}" %>
-          <%= link_to '', "/people/#{person.id}", class: "glyphicon glyphicon-trash", rel: "nofollow", title: "Delete #{person.name}", method: :delete %></td>
+          <%= link_to '', "/people/#{person.id}", class: "glyphicon glyphicon-trash", method: :delete, rel: "nofollow", title: "Delete #{person.name}" %></td>
         </div>
       </tr>
     <% end %>
