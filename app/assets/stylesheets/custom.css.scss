@@ -17,43 +17,51 @@
 }
 
 body {
-  font-size: 2.3em; 
+  font-size: 2.3em;
   margin: 0 auto;
+  background-color: #2C2A2A;
+  color: #EDEDED;
+}
+
+.thead {
+  color: #EED84A;
 }
 
 .container ul {
   list-style-type: none;
 }
 
+h2 {
+  color: #F89634;
+  padding-bottom: 1em;
+}
 //h2 {
 //  text-align: center;
 //  margin: 1.3em auto;
 //}
 
-.input {
+.centered {
   margin: 0 auto;
+  text-align: center;
 }
 
 .glyphicon-cog, .glyphicon-trash, .glyphicon-envelope {
   //vertical-align: middle;
   font-size: .8em;
-  color: #AFADB1;
   padding: 0;
 }
-.glyphicon-cog:hover {
-  text-decoration: none;
+
+.glyphicon-envelope:hover {text-decoration: none; color: #1CF15B;}
+.glyphicon-cog:hover{text-decoration: none; color: #EED84A;}
+.glyphicon-trash:hover{text-decoration: none; color: red;}
+
+table {
+  table-layout: fixed;
+  width: 100%;
 }
 
 th, td {
   text-align: center;
-}
-
-.alt-color1 {
-  color: #313E5B;
-}
-
-.alt-color2 {
-  color: #660609;
 }
 
 ol {
@@ -66,6 +74,10 @@ ol {
 
 .form-control {
   width: 18em;
+}
+
+.data-wrap {
+  word-wrap: normal;
 }
 
 .rotate:hover {
@@ -95,7 +107,39 @@ ol {
   @include border-radius(10px);
 }
 
+.btn-default-open {
+  border: 1px solid #EDEDED;
+  color: #428BCA;
+  transition: .5s;
+}
 
+.btn-default-open:hover {
+  border: 1px solid #858485;
+  color: #1CF15B;
+  background-color: #1A1919;
+  transition: .5s;
+}
 
+input {
+  background: #464444;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: #C8C1C6;
+}
 
+::-webkit-input-placeholder {
+   color: #787476;
+}
 
+:-moz-placeholder { /* Firefox 18- */
+   color: #787476;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #787476;
+}
+
+:-ms-input-placeholder {
+   color: #787476;
+}

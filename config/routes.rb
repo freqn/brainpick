@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
-  match '/', {via: :get, to: 'person#index'}
-  match '/people', {via: :get, to: 'person#index'}
-  match '/people', {via: :post, to: 'person#create'}
-  match '/people/new', {via: :get, to: 'person#new'}
-  match '/people/:id', {via: :get, to: 'person#show'}
-  match '/people/:id/edit', {via: :get, to: 'person#edit'}
-  match '/people/:id', {via: [:patch, :put], to: 'person#update'}
-  match '/people/:id', {via: :delete, to: 'person#destroy'}
+  devise_for :users
+
+  root 'people#index'
+  resources :people
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
