@@ -81,5 +81,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.assets.precompile += %w( .svg .eot .woff .ttf )
   config.assets.compile = true
+  config.action_mailer.default_url_options = { host: 'http://brain-pick.herokuapp.com'}
 
 end
