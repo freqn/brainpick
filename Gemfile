@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'activerecord-reset-pk-sequence'
 gem 'bootstrap-tooltip-rails'
  
 group :development do 

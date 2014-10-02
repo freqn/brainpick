@@ -44,6 +44,7 @@ class PersonController < ApplicationController
   def destroy
     @person = Person.find params[:id]
     @person.destroy
-    redirect_to '/people/'
+    Person.reset_pk_sequence if Person.count < 1
+    redirect_to '/people'
   end
 end
